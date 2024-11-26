@@ -30,9 +30,9 @@ variable "DOMAIN" {
   type = string
 }
 
-variable "MONGO_INITDB_ROOT_USERNAME"{
+variable "MONGO_INITDB_ROOT_USERNAME" {
   type = string
 }
-variable "MONGO_INITDB_ROOT_PASSWORD"{
+variable "MONGO_INITDB_ROOT_PASSWORD" {
   type = string
 }

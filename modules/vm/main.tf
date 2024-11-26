@@ -147,16 +147,15 @@ resource "azurerm_linux_virtual_machine" "IN-VM" {
       "sudo su -c 'mkdir -p /volumes/mongo/data'",
       "sudo su -c 'chmod -R 770 /volumes/mongo/data'",
       "sudo su -c 'touch /home/${var.admin_username}/.env'",
-      "sudo su -c 'echo \"MONGO_URL=${var.mongo_url}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"PORT=${var.port}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"MONGO_DB=${var.mongo_db}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"MAIL_SECRET_KEY=${var.mail_secret_key}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"MAPBOX_ACCESS_TOKEN=${var.mapbox_access_token}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"MAIL_SERVICE=${var.mail_service}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"MAIL_USER=${var.mail_user}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"MONGO_INITDB_ROOT_USERNAME=${var.mongo_initdb_root_username}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"MONGO_INITDB_ROOT_PASSWORD=${var.mongo_initdb_root_password}\" >> /home/${var.admin_username}/.env '",
-      "sudo su -c 'echo \"DOMAIN=${var.domain}\" >> /home/${var.admin_username}/.env '"
+      "sudo su -c 'echo \"MONGO_URL=${var.MONGO_URL}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"PORT=${var.PORT}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"MAIL_SECRET_KEY=${var.MAIL_SECRET_KEY}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"MAIL_SERVICE=${var.MAIL_SERVICE}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"MAIL_USER=${var.MAIL_USER}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"MAPBOX_ACCESS_TOKEN=${var.MAPBOX_ACCESS_TOKEN}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"MONGO_INITDB_ROOT_USERNAME=${var.MONGO_INITDB_ROOT_USERNAME}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"MONGO_INITDB_ROOT_PASSWORD=${var.MONGO_INITDB_ROOT_PASSWORD}\" >> /home/${var.admin_username}/.env'",
+      "sudo su -c 'echo \"DOMAIN=${var.DOMAIN}\" >> /home/${var.admin_username}/.env'",
     ]
     connection {
       type        = "ssh"

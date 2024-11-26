@@ -38,46 +38,46 @@ variable "ssh_key_path" {
   type = string
 }
 
+variable "lvm_name" {
+  type = string
+}
+
 variable "admin_username" {
   type = string
 }
 
-variable "mongo_url" {
+variable "MAIL_SECRET_KEY" {
   type = string
 }
 
-variable "port" {
+variable "MAPBOX_ACCESS_TOKEN" {
   type = string
 }
 
-variable "mongo_db" {
+variable "MAIL_SERVICE" {
   type = string
 }
 
-variable "mail_secret_key" {
+variable "MAIL_USER" {
   type = string
 }
 
-variable "mapbox_access_token" {
+variable "MONGO_INITDB_ROOT_PASSWORD" {
   type = string
 }
 
-variable "mail_service" {
-  type = string 
-}
-
-variable "mail_user"{
+variable "MONGO_INITDB_ROOT_USERNAME" {
   type = string
 }
 
-variable "mongo_initdb_root_username"{
+variable "DOMAIN" {
   type = string
 }
 
-variable "mongo_initdb_root_password"{
+variable "PORT" {
   type = string
 }
 
-variable "domain" {
+variable "MONGO_URL" {
   type = string
 }
