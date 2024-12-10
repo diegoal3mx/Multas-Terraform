@@ -83,7 +83,7 @@ resource "azurerm_public_ip" "IN-PIP" {
   allocation_method   = "Dynamic"
 }
 
-#Crear netowrk interface
+#Crear network interface
 resource "azurerm_network_interface" "IN-NIC" {
   name                = var.nic_name
   resource_group_name = azurerm_resource_group.IN_RG.name
