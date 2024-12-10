@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "IN_RG" {
   }
 }
 
-#Construir virtual network 
+#Construir virtual network
 resource "azurerm_virtual_network" "IN_VNET" {
   name                = var.vnet_name
   resource_group_name = azurerm_resource_group.IN_RG.name
