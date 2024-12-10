@@ -75,7 +75,7 @@ resource "azurerm_subnet_network_security_group_association" "IN-SGA" {
   network_security_group_id = azurerm_network_security_group.IN_SG.id
 }
 
-#Crear public ip
+#Create public ip
 resource "azurerm_public_ip" "IN-PIP" {
   name                = "${var.public_ip_name}-${var.environment}"
   resource_group_name = azurerm_resource_group.IN_RG.name
