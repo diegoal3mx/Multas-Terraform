@@ -69,7 +69,7 @@ resource "azurerm_network_security_group" "IN_SG" {
   }
 }
 
-# Crear asociacion entre la subnet y el security group
+#Crear asociacion entre la subnet y el security group
 resource "azurerm_subnet_network_security_group_association" "IN-SGA" {
   subnet_id                 = azurerm_subnet.IN_SUBNET.id
   network_security_group_id = azurerm_network_security_group.IN_SG.id
