@@ -84,4 +84,5 @@ variable "MONGO_URL" {
 
 variable "MONGO_DB" {
   type = string
+  default = "FineDB"
 }

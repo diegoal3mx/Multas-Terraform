@@ -1,6 +1,6 @@
 services:
   reverse-proxy:
-    image: "nginxproxy/nginx-proxy:alpine"
+    image: nginxproxy/nginx-proxy:alpine
     container_name: Reverse-Proxy
     restart: always
     ports:
@@ -22,7 +22,7 @@ services:
     environment:
       - NGINX_PROXY_CONTAINER=Reverse-Proxy
     volumes:
-      - /volumes/nginx/certs:/etc/nginx/certs:ro
+      - /volumes/nginx/certs:/etc/nginx/certs
       - /volumes/nginx/vhostd:/etc/nginx/vhost.d
       - /volumes/nginx/html:/usr/share/nginx/html:rw
       - /var/run/docker.sock:/tmp/docker.sock:ro
@@ -36,12 +36,16 @@ services:
       - mongo
     environment:
       - MONGO_URL=${MONGO_URL}
+      - MONGO_DB=FineDB
       - PORT=${PORT}
-      - MONGO_DB=${MONGO_DB}
       - MAIL_SECRET_KEY=${MAIL_SECRET_KEY}
       - MAIL_SERVICE=${MAIL_SERVICE}
       - MAIL_USER=${MAIL_USER}
       - MAPBOX_ACCESS_TOKEN=${MAPBOX_ACCESS_TOKEN}
+      - VIRTUAL_HOST=${DOMAIN}
+      - VIRTUAL_PATH=/
+      - LETSENCRYPT_HOST=${DOMAIN}
+      - LETSENCRYPT_EMAIL=${MAIL_USER}
   mongo:
     image: "mongo:latest"
     container_name: mongo
