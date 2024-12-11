@@ -81,3 +81,7 @@ variable "PORT" {
 variable "MONGO_URL" {
   type = string
 }
+
+variable "MONGO_DB" {
+  type = string
+}

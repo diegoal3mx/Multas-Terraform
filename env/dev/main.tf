@@ -1,24 +1,25 @@
 module "dev_vm" {
   source                     = "../../modules/vm"
   environment                = "dev"
-  MAIL_SECRET_KEY            = var.MAIL_SECRET_KEY
-  MAIL_USER                  = var.MAIL_USER
   admin_username             = "adminuser"
-  MAIL_SERVICE               = "gmail"
-  DOMAIN                     = var.DOMAIN
   resource_group             = "IN-RG-Diego"
   nic_name                   = "IN-NIC-Diego"
-  MONGO_URL                  = var.MONGO_URL
   security_group_name        = "IN-SG-Diego"
   ssh_key_path               = "./keys/Multas"
-  PORT                       = var.PORT
   server_name                = "IN-Server-Diego"
   location                   = "eastus2"
-  MAPBOX_ACCESS_TOKEN        = var.MAPBOX_ACCESS_TOKEN
   subnet_name                = "IN-SUBNET-Diego"
-  MONGO_INITDB_ROOT_USERNAME = var.MONGO_INITDB_ROOT_USERNAME
-  MONGO_INITDB_ROOT_PASSWORD = var.MONGO_INITDB_ROOT_PASSWORD
   public_ip_name             = "IN-IP-Diego"
   vnet_name                  = "IN_VNET_Diego"
-  lvm_name                   = "IN-RG-Terraform"
+  lvm_name                   = "IN-Server-Diegue"
+  MAIL_SECRET_KEY            = var.MAIL_SECRET_KEY
+  MAIL_USER                  = var.MAIL_USER
+  MAIL_SERVICE               = "gmail"
+  DOMAIN                     = var.DOMAIN
+  MONGO_URL                  = var.MONGO_URL
+  PORT                       = var.PORT
+  MAPBOX_ACCESS_TOKEN        = var.MAPBOX_ACCESS_TOKEN
+  MONGO_DB                   = "FineDB"
+  MONGO_INITDB_ROOT_USERNAME = var.MONGO_INITDB_ROOT_USERNAME
+  MONGO_INITDB_ROOT_PASSWORD = var.MONGO_INITDB_ROOT_PASSWORD
 }
