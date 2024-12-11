@@ -28,7 +28,7 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
   multas-api:
-    image: "djm75913/multas_api:latest"
+    image: "iscampoos/multas-app-api:latest"
     container_name: multas-api
     expose:
       - "3000"
