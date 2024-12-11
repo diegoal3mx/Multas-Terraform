@@ -20,5 +20,6 @@ module "dev_vm" {
   MONGO_INITDB_ROOT_PASSWORD = var.MONGO_INITDB_ROOT_PASSWORD
   public_ip_name             = "IN-IP-Diego"
   vnet_name                  = "IN_VNET_Diego"
-  lvm_name                   = "IN-Server-Diegue"
+  lvm_name                   = "IN-RG-Terraform"
+  MONGO_DB                   = var.MONGO_DB
 }
