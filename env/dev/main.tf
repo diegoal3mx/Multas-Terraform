@@ -21,5 +21,4 @@ module "dev_vm" {
   public_ip_name             = "IN-IP-Diego"
   vnet_name                  = "IN_VNET_Diego"
   lvm_name                   = "IN-RG-Terraform"
-  MONGO_DB                   = var.MONGO_DB
 }
